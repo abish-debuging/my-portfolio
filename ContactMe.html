@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+  <link rel="stylesheet" href="Conn.css">
+
+  <!-- Font Awesome (Free CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- ===== Header Navigation ===== -->
+  <header>
+    <nav>
+      <div class="logo">MyPortfolio</div>
+      <ul>
+        <li><a href="Abish.html">Home</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="Portfolio.html">Portfolio</a></li>
+        <li><a href="Hire.html">Hire Me</a></li>
+        <li><a href="ContactMe.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== Contact Section ===== -->
+  <section class="contact">
+    <div class="contact-container">
+      <h1>Let’s Connect 🤝</h1>
+      <p>Got a project idea, collaboration, or just want to say hello? <br> Drop me a message below!</p>
+
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <form id="contact-form">
+            <input type="text" name="user_name" placeholder="Your Name" required>
+            <input type="email" name="user_email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button id="contact-btn" type="submit">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h3>Contact Info</h3>
+          <p><strong>Email:</strong> akabishkalindi@gmail.com</p>
+          <p><strong>Phone:</strong> +91 9876543210</p>
+          <p><strong>Location:</strong> Assam, India</p>
+
+          <div class="socials">
+            <a target="_blank" href="https://in.linkedin.com/in/abish-kalindi-ab249421b"><i class="fab fa-linkedin"></i></a>
+            <a target="_blank" href="https://github.com/abish-debuging"><i class="fab fa-github"></i></a>
+            <a target="_blank" href="https://www.instagram.com/eng.abishkd/"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>© 2025 MyPortfolio | Built with 💙 & Futuristic Tech ⚡</p>
+  </footer>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Your script -->
+  <script src="conn.js"></script>
+</body>
+</html>

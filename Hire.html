@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hire Me</title>
+    <link rel="icon" type="images/x-icon" href="images/logo.jpg">
+
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f0f2d, #1a1a40, #111);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+
+    /* Glassmorphic Container */
+    .hire-container {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(12px);
+      padding: 50px 40px;
+      border-radius: 20px;
+      max-width: 700px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 0 40px rgba(0, 183, 255, 0.3);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hire-container h1 {
+  font-size: 2.8em;
+  background: linear-gradient(90deg, #00f2fe, #4facfe, #00f2fe);
+  background-clip: text;              /* Standard property */
+  -webkit-background-clip: text;      /* Safari / Chrome */
+  color: transparent;                 /* Fix for compatibility */
+  -webkit-text-fill-color: transparent; /* WebKit fix */
+  margin-bottom: 15px;
+  animation: textGlow 2s infinite alternate;
+}
+
+
+    @keyframes textGlow {
+      from { text-shadow: 0 0 10px #00f2fe, 0 0 20px #4facfe; }
+      to { text-shadow: 0 0 20px #4facfe, 0 0 40px #00f2fe; }
+    }
+
+    .hire-container p {
+      font-size: 1.1em;
+      color: #ccc;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    /* AI Neon Buttons */
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      margin: 10px;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #00f2fe, #4facfe);
+      color: #fff;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.3) 10%, transparent 40%);
+      animation: spin 5s linear infinite;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .btn:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 20px #00f2fe, 0 0 40px #4facfe;
+    }
+
+    /* Contact Form */
+    form {
+      margin-top: 30px;
+      text-align: left;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 8px;
+      color: #bbb;
+      font-size: 0.95em;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 18px;
+      border: none;
+      border-radius: 10px;
+      outline: none;
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      font-size: 1em;
+      transition: 0.3s;
+    }
+
+    form input:focus, form textarea:focus {
+      background: rgba(255,255,255,0.15);
+      box-shadow: 0 0 10px #00f2fe;
+    }
+
+    form textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="hire-container">
+    <h1>Hire Me</h1>
+    <p>
+      Looking for a passionate developer with creativity and problem-solving skills?  
+      Let’s build something amazing together powered by <strong>AI-driven ideas</strong> 🚀
+    </p>
+
+    <div>
+      <a href="akabishkalindi@gmail.com" class="btn">📧 Email Me</a>
+      <a href="https://in.linkedin.com/in/abish-kalindi" target="_blank" class="btn">🔗 LinkedIn</a>
+    </div>
+
+    <!-- Contact Form -->
+    <form id="hire-form">
+  <input type="text" name="user_name" placeholder="Your Name" required>
+  <input type="email" name="user_email" placeholder="Your Email" required>
+  <input type="text" name="project" placeholder="Project Title" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button id="hire-btn" type="submit">Hire Me 🚀</button>
+
+</form>
+
+    
+  </div>
+
+<!-- EmailJS SDK -->
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+
+<!-- Your script -->
+<script src="script.js"></script>
+
+</body>
+</html>

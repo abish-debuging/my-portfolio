@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Abish Kalindi</title>
+    <link rel="icon" type="images/x-icon" href="images/logo.jpg">
+
+  <link rel="stylesheet" href="services.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <h2 class="logo">Abish<span>Kalindi</span></h2>
+      <ul>
+         <li><a href="Abish.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="Portfolio.html">PORTFOLIO</a></li>
+                <li><a href="Services.html">SERVICES</a></li>
+                <li><a href="Hire.html">HIRE ME</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Services Section -->
+  <section class="services">
+    <div class="container">
+      <h1>My <span>Services</span></h1>
+      <p>I provide creative and technical solutions with a modern touch.</p>
+
+      <div class="service-grid">
+
+        <!-- Service 1 -->
+        <div class="service-card">
+          <i class="fas fa-laptop-code"></i>
+          <h3>Web Development</h3>
+          <p>Responsive, dynamic, and user-friendly websites built with modern technologies.</p>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+          <i class="fas fa-lock"></i>
+          <h3>Cybersecurity</h3>
+          <p>Security audits, vulnerability assessments, and awareness training for safe systems.</p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>App Development</h3>
+          <p>Cross-platform mobile apps with sleek design and smooth performance.</p>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card">
+          <i class="fas fa-bullhorn"></i>
+          <h3>Digital Marketing</h3>
+          <p>Helping businesses grow with SEO, branding, and social media strategies.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Abish Kalindi. All rights reserved.</p>
+  </footer>
+
+  <!-- Scroll Animation -->
+  <script>
+    const cards = document.querySelectorAll('.service-card');
+
+    window.addEventListener('scroll', () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+        if(cardTop < triggerBottom){
+          card.classList.add('show');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
